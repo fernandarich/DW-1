@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mandado Judicial</title>
+    <style>
+        body { font-family: 'Times New Roman', serif; padding: 40px; background: #fff; }
+        article { border: 2px solid #333; padding: 40px; max-width: 700px; margin: auto; }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { text-decoration: underline; font-size: 1.8rem; }
+        p { text-align: justify; line-height: 1.8; font-size: 1.1rem; }
+        .dado-preenchido { font-weight: bold; text-transform: uppercase; }
+        footer { margin-top: 60px; text-align: center; }
+        .linha { border-top: 1px solid #000; width: 250px; margin: 10px auto; }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>MANDADO DE CONVOCAÇÃO</h1>
+        </header>
+
+        <section id="conteudo-documento">
+            <p>
+                Pelo presente edital, fica convocado o(a) Sr(a). 
+                <span id="resNome" class="dado-preenchido"></span>, 
+                portador(a) do CPF <span id="resCpf" class="dado-preenchido"></span>, 
+                residente no endereço <span id="resEnd" class="dado-preenchido"></span>, 
+                na cidade de <span id="resCidade" class="dado-preenchido"></span>.
+            </p>
+            <p>
+                O não comparecimento na data estipulada poderá acarretar as sanções 
+                previstas no Código de Processo Civil vigente.
+            </p>
+        </section>
+
+        <footer>
+            <div class="linha"></div>
+            <p>Departamento Jurídico</p>
+        </footer>
+    </article>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Atribuição semântica dos dados capturados
+            document.getElementById('resNome').textContent = urlParams.get('nome');
+            document.getElementById('resCpf').textContent = urlParams.get('cpf');
+            document.getElementById('resEnd').textContent = urlParams.get('endereco');
+            document.getElementById('resCidade').textContent = urlParams.get('cidade');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo geral */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1a1a1a, #000000);
+    color: #ffffff;
+}
+
+/* Cabeçalho */
+div {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #f1c40f;
+}
+
+h1 {
+    color: #f1c40f;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Container principal */
+main {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: #f1c40f;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    margin-top: 10px;
+    transform: scale(1.2);
+}
+
+/* Botão */
+input[type="button"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #e1b700;
+    transform: scale(1.05);
+}
+
+/* Output */
+#outputValor {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0d3b66;
+    border: 2px solid #f1c40f;
+}

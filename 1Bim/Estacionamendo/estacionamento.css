@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    background: linear-gradient(135deg, #0b3c5d, #328cc1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #e0e0e0;
+}
+
+/* Caixa principal */
+main {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #0b3c5d;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+/* Botão */
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0b3c5d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #094dad;
+}
+
+/* Resultado */
+#outputValor {
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.aviso {
+    background-color: var(--cor-erro-fundo);
+    color: var(--cor-erro-texto);
+    padding: 1rem;
+    border-radius: var(--borda-raio);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}

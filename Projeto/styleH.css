@@ -1,0 +1,516 @@
+  /* RESET básico */
+  body {
+    margin: 0;
+    font-family: "Playfair Display", Helvetica, sans-serif;
+    background-color: #bdd2f4f5;
+  }
+
+  /* TOPO COM IMAGEM */
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Icoco.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+
+  /* MENU */
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #002e46;
+  }
+
+  /* CONTEÚDO */
+  main {
+    padding: 20px;
+  }
+
+  /* SEÇÕES (as caixinhas bonitas) */
+  section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* TÍTULOS */
+  h1 {
+    color: #0a2342;
+  }
+
+  h2 {
+    color: #0a2342;
+  }
+
+  h3 {
+    color: #0a2342;
+  }
+
+  /* LISTAS */
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  /* JOGOS */
+  .jogos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card-jogo {
+    background-color: #0a2342;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* separa conteúdo e botão */
+    height: 120px;
+    /* define altura pra funcionar certinho */
+  }
+
+  .card-jogo:hover {
+    transform: scale(1.03);
+    background-color: #002e46;
+  }
+
+  /* PRODUTOS */
+  .produtos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card-produto {
+    background-color: #0a2342;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.752);
+    /* sombra mais forte */
+  }
+
+  .card-produto img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .card-produto button {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    background-color: white;
+    color: #032958;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .card-produto button:hover {
+    background-color: #004164;
+  }
+
+  .card-jogo button {
+    margin-top: auto;
+    /* joga o botão pra baixo */
+    padding: 8px;
+    border: none;
+    background-color: white;
+    color: #0a2342;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .card-jogo button:hover {
+    background-color: #ddd;
+  }
+
+
+  .img-vip {
+    width: 800px;
+    /* imagem ocupa toda a largura */
+    border-radius: 20px;
+    /* bordas arredondadas */
+    margin: 1px 1px 1px;
+    /* espaço abaixo da imagem */
+    background-position: center;
+    /* centraliza a imagem */
+    display: block;
+    /* transforma em bloco pra centralizar */
+    margin-left: auto;
+    /* centraliza horizontalmente */
+    margin: 20px auto;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .faixa {
+    position: fixed;
+    top: 0;
+    width: 100px;
+    /* aumenta aqui */
+    height: 100vh;
+    z-index: 9999;
+  }
+
+  .faixa-esquerda {
+    left: 0;
+    background: linear-gradient(to bottom, black, #0a2342, rgb(130, 166, 255));
+  }
+
+  .faixa-direita {
+    right: 0;
+    background: linear-gradient(to bottom, black, #0a2342, rgb(130, 166, 255));
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .fechar {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .modal-content {
+    background: #f9fafb;
+    margin: 5% auto;
+    padding: 25px;
+    width: 420px;
+    border-radius: 16px;
+    text-align: left;
+
+    max-height: 80vh;
+    overflow-y: auto;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0b2545;
+  }
+
+  .opcao {
+    text-align: center;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+  }
+
+  .opcao:hover {
+    transform: scale(1.02);
+  }
+
+  .opcao h3 {
+    margin: 0;
+    color: #0b2545;
+  }
+
+  .opcao p {
+    margin: 0;
+    font-weight: bold;
+    color: #1e3a8a;
+  }
+
+  .opcao input {
+    width: 60px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .opcao button {
+    background: #0b2545;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
+    display: block;
+  }
+
+  .opcao button:hover {
+    background: #133c73;
+  }
+
+  .mapa {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .mapa img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .zoom {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    /* bem alto */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .zoom img {
+    display: block;
+    margin: 5% auto;
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  .fecharZoom {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+    /* acima de tudo */
+  }
+
+  .mapa img {
+    cursor: pointer;
+  }
+
+  /* Ícone */
+  .icone-carrinho {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .icone-carrinho {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    z-index: 10000;
+  }
+
+  .carrinho-lateral {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 320px;
+    height: 100vh;
+    background: #f9f9f9;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  #carrinho {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+
+  #total {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #003366;
+  }
+
+  /* Quando abre */
+  .carrinho-lateral.ativo {
+    right: 0;
+    background: #ffffff;
+    /* Fundo branco limpo */
+    border-left: 5px solid #0a2342;
+    /* Detalhe lateral em azul */
+
+  }
+
+  /* Título */
+  .carrinho-lateral h2 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0a2342;
+    font-family: "Playfair Display", serif;
+    /* Mantendo a tipografia do site */
+  }
+
+  /* Lista de itens */
+  #carrinho p {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #0a2342;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #00adef;
+    /* Azul Celeste do Grêmio */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+  }
+
+  #carrinho p:hover {
+    transform: translateX(5px);
+    /* Efeito suave ao passar o mouse */
+  }
+
+  .btn-remover {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 90px;
+    transition: 0.3s;
+  }
+
+  .btn-remover:hover {
+    background: #011d38;
+  }
+
+  /* Total */
+  #total {
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 18px;
+    color: #003366;
+  }
+
+  /* Botão */
+  .carrinho-lateral button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    background: #003366;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .carrinho-lateral button:hover {
+    background: #0055aa;
+  }
+
+  .icone-carrinho {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    /* Um pouco mais de respiro da borda */
+    background: #0a2342;
+    /* Azul Marinho do Grêmio */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    /* Estilo pílula */
+    box-shadow: 0 4px 15px rgba(202, 173, 173, 0.3);
+    cursor: pointer;
+    z-index: 10000;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+    /* Borda branca para destacar no fundo escuro */
+  }
+
+  .icone-carrinho:hover {
+    transform: translateY(-3px);
+    background: #002e46;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  #contador {
+    background: #0054ef;
+    /* Azul celeste para o contador */
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: bold;
+    border: 1px solid white;
+  }

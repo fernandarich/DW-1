@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bhaskara</title>
+</head>
+
+<body>
+    <div class="container">
+   <h1>Resolvendo Bhaskara</h1>
+
+   <label for="inputA">Coeficiente a</label>
+   <input type="text" name="inputA" id="inputA">
+    <br><br>
+
+   <label for="inputB">Coeficiente b</label>
+   <input type="text" name="inputB" id="inputB">
+   <br><br>
+
+   <label for="inputC">Coeficiente c</label>
+   <input type="text" name="inputC" id="inputC">
+   <br><br>
+    <input type="button" value="Calcular" id="btCalcular" onclick="calcularBhaskara()">
+
+   <br><br>
+   <div id="outputX1" style="background-color: rgb(38, 179, 255);">Coeficiente 1:</div>
+   <br>
+   <div id="outputX2" style="background-color: rgb(203, 83, 115);">Coeficiente 2:</div>
+
+    </div>
+    
+   <script src="./bhaskara.js"></script>
+   <script src="./bhaskaraControle.js"></script>
+   <link rel="stylesheet" href="style.css">
+</body>
+
+</html>

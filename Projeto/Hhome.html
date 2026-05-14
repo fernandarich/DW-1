@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grêmio - Bem-vindo torcedor</title>
+    <link rel="stylesheet" href="styleH.css">
+    <link href="https://fonts.google.com/specimen/Playfair+Display" rel="stylesheet">
+</head>
+
+<body>
+    <div class="faixa faixa-esquerda"></div>
+    <div class="faixa faixa-direita"></div>
+    <header>
+        <nav>
+            <a href="Hcadastro.html">Home</a>
+            <a href="Hprodutos.html">Produtos</a>
+            <a href="Hjogos.html">Jogos</a>
+            <a href="Hmuseu.html">Museu</a>
+            <a href="Hhistoria.html">História</a>
+            <a href="Hcolaboradores.html">Colaboradores</a>
+            <a href="Hjogadores.html">Jogadores</a>
+            <a href="Hvip.html">Seja VIP no site!</a>
+            <div class="icone-carrinho" onclick="toggleCarrinho()">
+                🛒 <span id="contador">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <a href="vip.html">
+        <img src="ISEJA VIP.png" alt="Seja VIP" class="img-vip">
+    </a>
+    <main>
+        <section>
+            <h1>Bem-vindo, Torcedor!</h1>
+            <h2>Explore o universo do Grêmio</h2>
+            <h3>Descubra as últimas notícias, jogos, e muito mais sobre o nosso amado Grêmio!</h3>
+        </section>
+        <section>
+            <p>Seja você um torcedor de longa data ou um novo fã, aqui é o lugar perfeito para se manter atualizado
+                sobre tudo relacionado ao Grêmio. Navegue pelos nossos produtos oficiais, confira os próximos jogos,
+                visite o museu virtual e mergulhe na rica história do clube. E não se esqueça de se tornar um membro
+                VIP
+                para ter acesso a conteúdos exclusivos e benefícios especiais!</p>
+            <p>Vamos juntos torcer pelo nosso tricolor e celebrar cada vitória! Força Grêmio!</p>
+        </section>
+        <section>
+            <h3> Próximos Jogos</h3>
+            <div class="jogos">
+                <div class="card-jogo">
+                    Grêmio vs. Internacional<br>05 de Abril de 2026
+                    <button onclick="abrirModal()">Comprar ingresso</button>
+                </div>
+
+                <div class="card-jogo">
+                    Grêmio vs. Flamengo<br>11 de Abril de 2026
+                    <button onclick="abrirModal()">Comprar ingresso</button>
+                </div>
+
+                <div class="card-jogo">
+                    Grêmio vs. Palmeiras<br>14 de Abril de 2026
+                    <button onclick="abrirModal()">Comprar ingresso</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3> Produtos em destaque</h3>
+            <div class="produtos">
+                <div class="card-produto">
+                    <img src="Icamisa.jpg" alt="Camisa do Grêmio">
+                    <p>Camisa Oficial 2026</p>
+                    <button onclick="addCarrinho('Camisa Oficial 2026')">Adicionar no carrinho</button>
+                </div>
+
+                <div class="card-produto">
+                    <img src="Ibone.jpg" alt="Boné">
+                    <p>Boné Tricolor</p>
+                    <button onclick="addCarrinho('Boné Tricolor')">Adicionar no carrinho</button>
+                </div>
+
+                <div class="card-produto">
+                    <img src="Ipelucia.jpg" alt="Pelúcia">
+                    <p>Pelúcia do Grêmio</p>
+                    <button onclick="addCarrinho('Pelúcia do Grêmio')">Adicionar no carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="modalIngresso" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <h2>Escolha seu ingresso</h2>
+
+            <div class="mapa">
+                <img src="I11.png" alt="Mapa do estádio" onclick="abrirZoom(this)">
+            </div>
+
+            <div class="opcao">
+                <h3>Arquibancada Norte</h3>
+                <p>R$ 50,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Norte', 50)">Adicionar</button>
+            </div>
+
+            <div class="opcao">
+                <h3>Cadeiras Superiores</h3>
+                <p>R$ 60,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Superior', 60)">Adicionar</button>
+            </div>
+
+            <div class="opcao">
+                <h3>Cadeira Corner</h3>
+                <p>R$ 120,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Corner', 120)">Adicionar</button>
+            </div>
+
+            <div class="opcao">
+                <h3>Cadeira Gold</h3>
+                <p>R$ 150,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Gold', 150)">Adicionar</button>
+            </div>
+
+            <div class="opcao">
+                <h3>Gramado</h3>
+                <p>R$ 200,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Gramado', 200)">Adicionar</button>
+            </div>
+
+        </div>
+    </div>
+    <div id="zoomImagem" class="zoom" onclick="fecharZoom()">
+        <span class="fecharZoom">&times;</span>
+        <img id="imgGrande">
+    </div>
+    <div id="carrinhoLateral" class="carrinho-lateral">
+    <h2>Seu Carrinho</h2>
+    <div id="carrinho"></div>
+    <p id="total"></p>
+    <button onclick="fecharCarrinho()">Fechar</button>
+    <script src="Jcarrinho.js"></script>
+</div>
+</body>
+<script>
+
+    function addCarrinho(produto) {
+        let preco = 0;
+
+        if (produto === "Camisa Oficial 2026") preco = 399.99;
+        if (produto === "Boné Tricolor") preco = 79.99;
+        if (produto === "Pelúcia do Grêmio") preco = 49.80;
+
+        adicionarAoCarrinho(produto, preco);
+    }
+
+    function abrirModal() {
+        document.getElementById("modalIngresso").style.display = "block";
+    }
+
+    function fecharModal() {
+        document.getElementById("modalIngresso").style.display = "none";
+    }
+
+    function adicionarIngresso(tipo, valor) {
+        let inputs = document.querySelectorAll(".opcao input");
+
+        let quantidade = 1;
+
+        inputs.forEach(input => {
+            if (input.parentElement.innerText.includes(tipo)) {
+                quantidade = parseInt(input.value) || 1;
+            }
+        });
+
+        adicionarAoCarrinho("Ingresso " + tipo, valor, quantidade);
+
+        
+    }
+
+    function abrirZoom(img) {
+        document.getElementById("zoomImagem").style.display = "block";
+        document.getElementById("imgGrande").src = img.src;
+    }
+
+    function fecharZoom() {
+        document.getElementById("zoomImagem").style.display = "none";
+    }
+
+
+</script>
+
+</html>

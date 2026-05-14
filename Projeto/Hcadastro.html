@@ -1,0 +1,53 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grêmio - Cadastro</title>
+        <link rel="stylesheet" href="styleCc.css">
+    </head>
+    <body>
+        <h1>Cadastro</h1>
+        <form id="formCadastro" action="cadastro.html" method="post">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+            <label for="cpf">CPF:</label>
+            <input type="number" id="cpf" name="cpf" required><br><br>
+            <label for="telefone">Telefone:</label>
+            <input type="number" id="telefone" name="telefone" min="1" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" minlength="6" maxlength="20" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <script>
+        document.getElementById("formCadastro").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+            const cpf = document.getElementById("cpf").value;
+            const telefone = document.getElementById("telefone").value;
+
+            const cpfValue = parseInt(cpf, 10);
+            const telefoneValue = parseInt(telefone, 10);
+
+            if (isNaN(cpfValue) || cpfValue < 0 || cpf.length !== 11) {
+                alert("CPF inválido. Deve conter exatamente 11 dígitos e não pode ser negativo.");
+                return;
+            } else if (isNaN(telefoneValue) || telefoneValue < 0 || telefone.length < 10 || telefone.length > 11) {
+                alert("Telefone inválido. Deve conter entre 10 e 11 dígitos e não pode ser negativo.");
+                return;
+            }
+            // salva no navegador
+            localStorage.setItem("email", email);
+            localStorage.setItem("senha", senha);
+
+            alert("Cadastro realizado com sucesso!");
+            window.location.href = "Hindex.html"; // volta pro login
+
+        });
+        </script>
+    </body>
+</html>

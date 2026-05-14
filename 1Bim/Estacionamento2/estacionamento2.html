@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento pago</title>
+    <link rel="stylesheet" href="estacionamento2.css">
+</head>
+<body>
+    <div>
+    <h1>Bem-vindo ao Estacionamento Pago</h1>
+    <p>Antes de sair, verifique se seu veículo está bem estacionado e se não há objetos deixados para trás.</p>
+    </div>
+    <main>
+        <h2>Calcular o valor a ser pago:</h2>
+        <br>
+        <label for="nomeC">Nome completo:</label>
+        <input type="text" name="nomeC" id="nomeC">
+        <br>
+        <label for="placaV">Placa do veículo:</label>
+        <input type="text" name="placaV" id="placaV">
+        <br>
+        <label for="tipoV">O veiculo é grande?</label>
+        <input type="checkbox" name="tipoV" id="tipoV">
+        <br>
+        <label for="clienteF">O cliente é frequente?</label>
+        <input type="checkbox" name="clienteF" id="clienteF">
+        <br>
+        <label for="tempoP">Data e hora de entrada:</label>
+        <input type="datetime-local" name="tempoP" id="tempoP">
+        <br>
+        <label for="tempoS">Data e hora de saída:</label>
+        <input type="datetime-local" name="tempoS" id="tempoS">
+        <br><br>
+        <input type="button" value="Calcular" onclick="calcularValor()">
+        <br><br>
+        <div id="outputValor" style="background-color: #333;">Valor a ser pago:</div>
+        <script src="./estacionamento2.js"></script>
+   </main>
+</body>
+</html>

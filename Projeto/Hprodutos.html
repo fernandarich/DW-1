@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GremioMania! - Produtos</title>
+    <link rel="stylesheet" href="styleP.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="Hhome.html">Home</a>
+            <a href="Hprodutos.html">Produtos</a>
+            <a href="Hjogos.html">Jogos</a>
+            <a href="Hmuseu.html">Museu</a>
+            <a href="Hhistoria.html">História</a>
+            <a href="Hcolaboradores.html">Colaboradores</a>
+            <a href="Hjogadores.html">Jogadores</a>
+            <a href="Hvip.html">Seja VIP!</a>
+            <div class="icone-carrinho" onclick="toggleCarrinho()">
+                🛒 <span id="contador">0</span>
+            </div>
+        </nav>
+
+    </header>
+
+    <section>
+        <h2>Produtos Grêmio</h2>
+        <p>Confira os produtos oficiais do Imortal Tricolor!</p>
+
+        <div class="filtros">
+            <button onclick="filtrar('todos')">Todos</button>
+            <button onclick="filtrar('camisa')">Camisas</button>
+            <button onclick="filtrar('acessorio')">Acessórios</button>
+            <button onclick="filtrar('personalizados')">Personalizados</button>
+        </div>
+
+        <div class="produtos" id="lista-produtos">
+            <div class="produto" data-categoria="camisa">
+                <img src="Icamisa.jpg" alt="Camisa Oficial">
+                <h3>Camisa Oficial 2026</h3>
+                <p>R$ 399,90</p>
+
+                <button
+                    onclick="abrirDetalhes('Camisa Oficial 2026', 'Camisa New Balance - Tamanhos: P, M, G, GG', 'R$ 399,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Camisa Oficial 2026', 399.90)">Adicionar</button>
+
+
+            </div>
+
+            <div class="produto" data-categoria="camisa">
+                <img src="Icamisa2.jpg" alt="Camisa Pampa">
+                <h3>Camisa Pampa</h3>
+                <p>R$ 350,90</p>
+                <button
+                    onclick="abrirDetalhes('Camisa Pampa', 'Camisa inspirada no clima do sul do Brasil - Tamanhos: P, M, G', 'R$ 350,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Camisa Pampa', 350.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="camisa">
+                <img src="Icamisa3.jpg" alt="Camisa Pampa">
+                <h3>Camisa Antiga 1993</h3>
+                <p>R$ 299,90</p>
+                <button
+                    onclick="abrirDetalhes('Camisa Antiga 1993', 'Camisa usada na temporada de 1993 - Tamanhos: P, G, GG', 'R$ 299,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Camisa Antiga 1993', 299.90)">Adicionar</button>
+
+            </div>
+
+            <div class="produto" data-categoria="camisa">
+                <img src="Icamisa5.png" alt="Camisa Pampa">
+                <h3>Camisa Branca</h3>
+                <p>R$ 270,90</p>
+                <button
+                    onclick="abrirDetalhes('Camisa Branca', 'Camisa inspirada na trajetória vitoriosa do clube nos anos 90 - Tamanhos: P, M, G, GG', 'R$ 270,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Camisa Branca', 270.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="camisa">
+                <img src="Icamisa4.webp" alt="Outubro Rosa">
+                <h3>Camisa Outubro Rosa</h3>
+                <p>R$ 199,90</p>
+                <button
+                    onclick="abrirDetalhes('Camisa Outubro Rosa', 'Camisa especial para o mês da conscientização sobre o câncer de mama - Tamanhos: P, M, G, GG', 'R$ 199,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Camisa Outubro Rosa', 199.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="acessorio">
+                <img src="Ibone.jpg" alt="Boné">
+                <h3>Boné do Grêmio</h3>
+                <p>R$ 79,90</p>
+
+                <button
+                    onclick="abrirDetalhes('Boné do Grêmio', 'Boné oficial do Grêmio para caminhada ou uso do dia a dia', 'R$ 79,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Boné do Grêmio', 79.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="acessorio">
+                <img src="Icarteira.webp" alt="Carteira">
+                <h3>Carteira do Grêmio</h3>
+                <p>R$ 159,90</p>
+
+                <button
+                    onclick="abrirDetalhes('Carteira do Grêmio', 'Carteira oficial para guardar documentos e cartões de forma mais estilosa', 'R$ 159,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Carteira do Grêmio', 159.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="acessorio">
+                <img src="Ipingente.jpg" alt="Pingente">
+                <h3>Pingente do Grêmio</h3>
+                <p>R$ 79,90</p>
+
+                <button
+                    onclick="abrirDetalhes('Pingente do Grêmio', 'Pingente para mostrar o orgulho pelo clube Tipo: Ouro ou Prata', 'R$ 79,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Pingente do Grêmio', 79.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="acessorio">
+                <img src="Iberloque.webp" alt="Berloque">
+                <h3>Berloque do Grêmio</h3>
+                <p>R$ 129,90</p>
+                <button
+                    onclick="abrirDetalhes('Berloque do Grêmio', 'Berloque para uso em pulseiras da Vivara', 'R$ 129,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Berloque do Grêmio', 129.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="personalizados">
+                <img src="Iquadro.webp" alt="Quadro">
+                <h3>Quadro do Grêmio</h3>
+                <p>R$ 320,90</p>
+
+                <button
+                    onclick="abrirDetalhes('Quadro do Grêmio', 'Quadro com camisa e assinatura dos jogadores', 'R$ 320,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Quadro do Grêmio', 320.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="personalizados">
+                <img src="Icaderno.webp" alt="Cuia">
+                <h3>Caderno Inteligente Grêmio</h3>
+                <p>R$ 489,90</p>
+
+                <button
+                    onclick="abrirDetalhes('Caderno Inteligente Grêmio', 'Caderno Inteligente com design exclusivo do Grêmio e funcionalidades avançadas - Tamanhos: A4 e A5', 'R$ 489,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Caderno Inteligente Grêmio', 489.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="personalizados">
+                <img src="Icuia.webp" alt="Cuia">
+                <h3>Cuia do Grêmio</h3>
+                <p>R$ 100,90</p>
+
+                <button
+                    onclick="abrirDetalhes('Cuia do Grêmio', 'Cuia para tomar seu chimarrão no estilo Grêmio', 'R$ 100,90')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Cuia do Grêmio', 100.90)">Adicionar</button>
+            </div>
+
+            <div class="produto" data-categoria="personalizados">
+                <img src="Ipelucia.jpg" alt="Pelúcia">
+                <h3>Pelúcia do Grêmio</h3>
+                <p>R$ 49,80</p>
+
+                <button
+                    onclick="abrirDetalhes('Pelúcia do Grêmio', 'Pelúcia do Mosqueteiro para ter bons sonhos', 'R$ 49,80')"
+                    class="btn-detalhes">
+                    Ver detalhes
+                </button>
+
+                <button onclick="adicionarAoCarrinho('Pelúcia do Grêmio', 49.80)">Adicionar</button>
+            </div>
+        </div>
+    </section>
+    <div id="carrinhoLateral" class="carrinho-sidebar">
+        <span class="fechar-x" onclick="fecharCarrinho()">&times;</span>
+
+        <h2>Seu Carrinho</h2>
+
+        <div id="carrinho">
+        </div>
+
+        <div class="rodape-carrinho">
+            <hr>
+            <div id="total">Total: R$ 0,00</div>
+            <button class="btn-finalizar" onclick="alert('Indo para o pagamento!')">Finalizar Compra</button>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <h2 id="tituloProduto"></h2>
+            <p id="descricaoProduto"></p>
+            <p id="precoProduto"></p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div>
+                <h3>Grêmio Mania</h3>
+                <p>Loja oficial do torcedor tricolor 💙</p>
+            </div>
+
+            <div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Seja VIP</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contato</h4>
+                <p>Email: atendimento@gremio.com</p>
+                <p>Telefone: (51) 3218-2000</p>
+            </div>
+
+            <div>
+                <h4>Redes</h4>
+                <p>Instagram - @gremio</p>
+                <p>Twitter - @Gremio</p>
+                <p>Facebook - GremioNet</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Grêmio Mania - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="Jcarrinho.js"></script>
+</body>
+<script>
+    // Função de Filtro (Mantenha esta aqui ou mova para um arquivo .js)
+    function filtrar(categoria) {
+        const produtos = document.querySelectorAll('.produto');
+        produtos.forEach(produto => {
+            const categoriaDoProduto = produto.getAttribute('data-categoria');
+            if (categoria === 'todos' || categoriaDoProduto === categoria) {
+                produto.style.display = "block";
+            } else {
+                produto.style.display = "none";
+            }
+        });
+    }
+
+    function abrirDetalhes(nome, descricao, info3, info4) {
+        const modal = document.getElementById("modal");
+        const titulo = document.getElementById("tituloProduto");
+        const desc = document.getElementById("descricaoProduto");
+        const preco = document.getElementById("precoProduto");
+
+        modal.style.display = "block";
+        titulo.innerText = nome;
+
+        // Se o quarto argumento existir, o terceiro era a descrição extra
+        if (info4) {
+            desc.innerText = descricao + " | " + info3;
+            preco.innerText = "Preço: " + info4;
+        } else {
+            // Se só vieram 3 argumentos, o terceiro já é o preço
+            desc.innerText = descricao;
+            preco.innerText = "Preço: " + info3;
+        }
+    }
+
+    function fecharModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+</script>
+
+</html>

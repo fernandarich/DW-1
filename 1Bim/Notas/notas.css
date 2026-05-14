@@ -1,0 +1,101 @@
+body {
+    font-family: Instrument Serif;
+    background-color: f5f9ff;
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+header {
+    background-color: rgb(115, 147, 244); /*cor de fundo do header*/
+    color: black; /*cor do texto do header*/
+    text-align: center; /*alinha o texto ao centro*/
+    padding: 5px; /*espaçamento interno do header*/
+}
+
+/*main*/
+main {
+    padding: 50px; /*espaçamento interno do main*/
+    max-width: 8000px; /*largura máxima do main*/
+    margin: auto; /*centraliza o main horizontalmente*/
+    background-color: rgb(190, 210, 255); /*cor de fundo do main*/
+}
+
+/*inputs*/
+input {
+    padding: 5px; /*espaçamento interno dos inputs*/
+    margin: 3px 0; /*espaçamento externo dos inputs*/
+    width: 40%; /*largura dos inputs*/
+    max-width: 500px; /*largura máxima dos inputs*/
+    border: 1px solid #165deb; /*borda dos inputs*/
+    border-radius: 100px; /*borda arredondada dos inputs*/
+} 
+
+/*botão*/
+input[type="button"] {
+    background-color: rgb(115, 147, 244); /*cor de fundo do botão*/
+    color: rgb(5, 3, 34); /*cor do texto do botão*/
+    border: none; /*remove a borda do botão*/
+    cursor: pointer; /*muda o cursor para indicar que é clicável*/
+    font-weight: bold; /*deixa o texto do botão em negrito*/
+}
+
+input[type="button"]:hover {
+    background-color: rgb(8, 5, 43); /*cor de fundo do botão ao passar o mouse*/
+    color: rgb(180, 198, 250); /*cor do texto do botão ao passar o mouse*/
+}
+
+/*resultado*/
+.result-section {
+    margin-top: 20px; /*espaçamento entre o botão e a tabela de resultado*/
+    padding: 15px; /*espaçamento interno da seção de resultado*/
+    border-left: 5px solid rgb(48, 70, 135); /*borda esquerda da seção de resultado*/
+    background-color: rgb(190, 210, 255); /*cor de fundo da seção de resultado*/
+    border-radius: 8px; /*borda arredondada da seção de resultado*/
+}
+
+.hidden {
+    display: none; /*esconde o elemento quando a classe "hidden" é aplicada*/
+}
+
+/*tabela*/
+table {
+    width: 100%; /*largura total da tabela*/
+    border-collapse: collapse; /*remove os espaços entre as células da tabela*/
+    margin-top: 20px; /*espaçamento entre o botão e a tabela de resultado*/
+}
+
+thead {
+    background-color: rgb(115, 147, 244); /*cor de fundo do cabeçalho da tabela*/
+    color: rgb(5, 3, 34); /*cor do texto do cabeçalho da tabela*/
+}
+
+td, th {
+    border: 1px solid rgb(20, 26, 93); /*borda das células da tabela*/
+    padding: 8px; /*espaçamento interno das células da tabela*/
+    text-align: center; /*alinha o texto*/
+}
+
+/*hover das linhas da tabela*/
+tbody tr:hover {
+    background-color: rgb(5, 3, 34); /*cor de fundo da linha ao passar o mouse*/
+    color: rgb(180, 198, 250); /*cor do texto da linha ao passar o mouse*/
+}
+
+/*footer*/
+footer {
+    margin-top: 20px;
+    background-color: rgb(255, 57, 57); /*cor de fundo do footer*/
+    color: rgb(5, 3, 34); /*cor do texto do footer*/
+    text-align: center; /*alinha o texto ao centro*/
+    padding: 25px; /*espaçamento interno do footer*/
+    margin-top: 0px; /*espaçamento entre a tabela de resultado e o footer*/
+
+}
+
+.highlight {
+    background-color: rgb(255, 0, 0); /*cor de fundo para destacar elementos importantes*/
+    color: rgb(255, 255, 255); /*cor do texto para destacar elementos importantes*/
+    font-weight: bold; /*deixa o texto em negrito para destacar elementos importantes*/
+}
+

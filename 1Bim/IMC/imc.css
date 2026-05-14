@@ -1,0 +1,175 @@
+/* Definição da paleta de cores */
+:root {
+    --primary-orange: #9b53fa;
+    /* Laranja moderno */
+    --light-yellow: #5a8ad8;
+    /* Amarelo bem suave para fundos/destaques */
+    --white: #FFFFFF;
+    --bg-color: #FAFAFA;
+    /* Fundo da página quase branco */
+    --text-dark: #333333;
+    --error-bg: red;
+    /* Requisito: fundo vermelho */
+    --error-text: white;
+    /* Requisito: texto branco */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(135deg, #68a2ff, var(--primary-orange));
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 6px 10px rgba(248, 33, 33, 0.05);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem 1rem;
+    flex: 1;
+}
+
+/* Estilos dos Cartões (Seções) */
+.calculator-card,
+.result-section,
+.table-section {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border-top: 4px solid var(--primary-orange);
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-orange);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #156077;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Tratamento de Erro (Requisito Específico) */
+.error-message {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: none;
+    /* Oculto por padrão */
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Resultados e Tabelas */
+h2 {
+    color: var(--primary-orange);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.result-section p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+th,
+td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background-color: #fafafa;
+}
+
+/* Desafio Extra: Classe para destacar a linha da tabela */
+tr.highlight {
+    background-color: var(--light-yellow);
+    font-weight: bold;
+    border-left: 4px solid var(--primary-orange);
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--white);
+    color: #777;
+    border-top: 1px solid #eee;
+}

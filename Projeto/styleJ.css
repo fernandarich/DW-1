@@ -1,0 +1,174 @@
+  /* RESET básico */
+body {
+  margin: 0;
+  font-family: "Playfair Display", Helvetica, sans-serif;
+  background-color: #bdd2f4f5;
+}
+  
+  /* TOPO COM IMAGEM */
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Icoco.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+
+  /* MENU */
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #002e46;
+  }
+  /* Carrinho Lateral - CORRIGIDO PARA .carrinho-sidebar */
+.carrinho-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Escondido */
+    width: 320px;
+    height: 100vh;
+    background: #f9f9f9;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 20000;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Quando estiver ativo (chamado pelo JS) */
+.carrinho-sidebar.ativo {
+    right: 0;
+    background: #ffffff;
+    border-left: 5px solid #0a2342;
+}
+
+/* Ícone do Carrinho (Pílula Azul) */
+.icone-carrinho {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: #0a2342;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 10000;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.icone-carrinho:hover {
+    transform: translateY(-3px);
+    background: #002e46;
+}
+
+/* Contador dentro do ícone */
+#contador {
+    background: #0054ef;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+/* Itens dentro do carrinho */
+#carrinho p {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #0a2342;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #00adef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botões do carrinho */
+.carrinho-sidebar button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #0a2342;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Posicionamento do X */
+.fechar-x {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0a2342;
+    cursor: pointer;
+    line-height: 1;
+    transition: 0.2s;
+}
+
+.fechar-x:hover {
+    color: #fe3030;
+    transform: scale(1.2);
+}
+
+/* Ajuste na estrutura da Sidebar para o botão ficar no fim */
+.carrinho-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o conteúdo para as extremidades */
+}
+
+/* Título com espaço para o X */
+.carrinho-sidebar h2 {
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0a2342;
+}
+
+/* Área dos produtos com scroll se encher demais */
+#carrinho {
+    flex: 1; 
+    overflow-y: auto;
+    padding-right: 5px; /* Espaço para a barra de rolagem */
+}
+
+/* Rodapé fixo no final do carrinho */
+.rodape-carrinho {
+    margin-top: auto; /* Garante que fique no fundo */
+    padding-top: 15px;
+}
+
+.btn-finalizar {
+    background: #003366;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

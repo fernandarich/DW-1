@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f9ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    background-color: #0a3d91;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MAIN */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* INPUTS */
+input {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* BOTÃO */
+input[type="button"] {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="button"]:hover {
+    background-color: #0a3d91;
+}
+
+/* RESULTADO */
+.result-section {
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 5px solid #1e90ff;
+    background-color: #eef5ff;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #0a3d91;
+    color: white;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* HOVER NAS LINHAS */
+tbody tr:hover {
+    background-color: #dbe9ff;
+}
+
+/* FOOTER (AVISO) */
+footer {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+.highlight {
+    background-color: #1e90ff !important;
+    color: white;
+    font-weight: bold;
+}

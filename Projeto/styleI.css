@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* IMAGEM DE FUNDO */
+    background: url("Igremioiii.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    height: 600px;
+
+    display: flex;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.35);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* LADO ESQUERDO */
+.image-box {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 50px;
+    color: white;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.image-box h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.image-box p {
+    font-size: 18px;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+/* LOGIN */
+.login-box {
+    width: 400px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-box h1 {
+    margin-bottom: 10px;
+    color: #0099ff;
+}
+
+.login-box h3 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: #444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #0099ff;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0077cc;
+}
+
+a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

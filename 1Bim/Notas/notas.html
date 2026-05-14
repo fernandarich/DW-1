@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de aproveitamento</title>
+    <link rel="stylesheet" href="notas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Média de aproveitamento</h1>
+        <p>Calcule sua média de aproveitamento com base nas suas notas e atividades.</p>
+    </header>
+
+    <main>
+        <label for="ra">Sua R.A:</label>
+        <input type="number" name="ra" id="ra">
+        <br>
+        <label for="nome">Seu nome:</label>
+        <input type="text" name="nome" id="nome">
+        <br><br>
+        <label for="nota1">Nota 1:</label>
+        <input type="number" name="nota1" id="nota1" min="0" max="10">
+        <br>
+        <label for="nota2">Nota 2:</label>
+        <input type="number" name="nota2" id="nota2" min="0" max="10">
+        <br>
+        <label for="nota3">Nota 3:</label>
+        <input type="number" name="nota3" id="nota3" min="0" max="10">
+        <br>
+        <label for="nota4">Nota 4:</label>
+        <input type="number" name="nota4" id="nota4" min="0" max="10">
+        <br><br>
+        <label for="atividades">Média de atividades:</label>
+        <input type="number" name="atividades" id="atividades" min="0" max="10">
+        <br><br>
+        <input type="button" value="Calcular média" onclick="calcularMedia()">
+
+        <p id="error" class="error hidden">Erro: As notas não podem ser negativas ou vazias.</p>
+
+        <section class="result-section hidden" id="result-section">
+            <h2>Seu Resultado</h2>
+            <p id="aluno">Aluno: <strong>--</strong></p>
+            <p id="ra-display">R.A: <strong>--</strong></p>
+            <p id="notas">Notas: <strong>--</strong></p>
+            <p id="atividades-display">Atividades: <strong>--</strong></p>
+            <p id="media-value">Média: <strong>--</strong></p>
+            <p id="conceito">Conceito: <strong>--</strong></p>
+            <p id="situacao">Situação: <strong>--</strong></p>
+        </section>
+
+
+        <section class="table-section">
+            <h2>Tabela de Classificação</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Média de aproveitamento</th>
+                        <th>Conceito</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="row-abaixo">
+                        <td>Maior que 9.0</td>
+                        <td>A</td>
+                    </tr>
+                    <tr id="row-normal">
+                        <td>7.5 até 9.0</td>
+                        <td>B</td>
+                    </tr>
+                    <tr id="row-sobrepeso">
+                        <td>6.0 até 7.5</td>
+                        <td>C</td>
+                    </tr>
+                    <tr id="row-ob1">
+                        <td>4.0 até 6.0</td>
+                        <td>D</td>
+                    </tr>
+                    <tr id="row-ob2">
+                        <td>Menor que 4.0</td>
+                        <td>E</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+    ⚠️ Atenção: Preencha todos os campos corretamente antes de calcular a média!
+    </footer>
+</body>
+      <script src="notas.js"></script>
+</html>

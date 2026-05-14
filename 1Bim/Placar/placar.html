@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Placar de Jogo</title>
+    <link rel="stylesheet" href="placar.css">
+</head>
+<body>
+
+    <h1>Placar de Jogo</h1>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>Time A</h2>
+            <p id="pontosA">0</p>
+            <button onclick="alterar('A', 1)">+1 Ponto</button>
+        </div>
+
+        <div class="card">
+            <h2>Time B</h2>
+            <p id="pontosB">0</p>
+            <button onclick="alterar('B', 1)">+1 Ponto</button>
+        </div>
+
+    </div>
+
+    <button class="reset" onclick="resetar()">Resetar</button>
+
+    <script src="placar.js"></script>
+</body>
+</html>

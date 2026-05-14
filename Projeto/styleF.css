@@ -1,0 +1,120 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #0b1c3f, #000000);
+    color: white;
+}
+
+/* EFEITO DE LUZ */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(120deg, transparent, rgba(0,170,255,0.2), transparent);
+    animation: luz 10s linear infinite;
+    pointer-events: none;
+}
+
+/* CARD */
+form {
+    position: relative;
+    z-index: 1;
+
+    width: 320px;
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(145deg, rgba(0,0,0,0.9), rgba(10,20,40,0.9));
+    border: 1px solid rgba(0,170,255,0.3);
+
+    box-shadow: 
+        0 0 30px rgba(0,170,255,0.4),
+        0 0 60px rgba(0,170,255,0.2);
+
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+}
+
+/* TÍTULO */
+h2 {
+    position: absolute;
+    top: 150px;
+    z-index: 1;
+    color: #0050b3;
+}
+
+/* LABEL */
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+    border: none;
+
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #00aaff;
+    box-shadow: 0 0 10px rgba(0,170,255,0.5);
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, #00aaff, #0077cc);
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,170,255,0.6);
+}
+
+/* ANIMAÇÃO */
+@keyframes luz {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

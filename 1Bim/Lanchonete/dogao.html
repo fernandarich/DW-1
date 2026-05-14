@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogão Mata-Fome</title>
+    <link rel="stylesheet" href="dogao.css">
+</head>
+
+<body>
+    <h1>Bem-vindo ao Dogão Mata-Fome</h1>
+    <p>Antes de fazer seu pedido, confira nosso cardápio e escolha seu dogão favorito!</p>
+    <main>
+        <h2>Faça seu pedido:</h2>
+        <br>
+        <label for="dogB">Cachorro quente básico - R$ 22,00</label>
+        <input type="number" placeholder="Quantos?" name="dogB" id="dogB">
+        <br>
+        <label for="dogC">Cachorro quente duplo - R$ 26,00</label>
+        <input type="number" placeholder="Quantos?" name="dogC" id="dogC">
+        <br>
+        <label for="dogS">X-Salada - R$ 29,00</label>
+        <input type="number" placeholder="Quantos?" name="dogS" id="dogS">
+        <br>
+        <label for="refri3">Refrigerante 350ml - R$ 5,00</label>
+        <input type="number" placeholder="Quantos?" name="refri3" id="refri3">
+        <br>
+        <label for="refri2">Refrigerante 1L - R$ 8,00</label>
+        <input type="number" placeholder="Quantos?" name="refri2" id="refri2">
+    </main>
+    <header>
+        <input type="button" value="Fechar Pedido" onclick="calcularTotal()">
+        <br><br>
+        <div id="outputTotal" style="background-color: #ff6600;">Valor total do pedido:</div>
+        <script src="./dogao.js"></script>
+    </header>
+</body>
+
+</html>
