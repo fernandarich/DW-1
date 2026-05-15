@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pitagoras</title>
+</head>
+
+<body>
+    <h1>Mande os catetos A e B e eu resolvo!</h1>
+    <label for="enderecoServidorInput">Endereço do Servidor:</label>
+    <input type="text" id="enderecoServidorInput" placeholder="Digite o endereço do servidor" value="localhost"><br><br>
+    
+    <label for="inputPorta">Porta:</label>
+    <input type="text" id="inputPorta" placeholder="Digite a porta" value="3000"><br><br>
+    <label for="inputCatA">Qual é o cateto A:</label>
+    <input type="text" id="inputCatA" placeholder="Digite o valor do cateto A"><br><br>
+    <label for="inputCatB">Qual é o cateto B:</label>
+    <input type="text" id="inputCatB" placeholder="Digite o valor do cateto B"><br><br>
+    <button onclick="calcularPit()">Calcular</button>
+    <br>
+    <br>
+    <h3> Resposta do servidor</h3>
+    <span id="respostaDoServidor">.....</span>    
+
+    <script>
+        async function calcularPit() {            
+            const catetoA = document.getElementById('inputCatA').value;
+            const catetoB = document.getElementById('inputCatB').value;
+            const enderecoServidor = document.getElementById('enderecoServidorInput').value;
+            const porta = document.getElementById('inputPorta').value;
+            try {
+                const response = await fetch(`http://${enderecoServidor}:${porta}/calcularPit`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ a: catetoA, b: catetoB })
+                });
+
+                const data = await response.text();
+                const fraseFinal = `A hipotenusa para os catetos digitados é: ${data}`;
+                document.getElementById("respostaDoServidor").innerHTML = data;
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro na comunicação com o servidor');
+            }
+        }
+    </script>
+</body>
+
+</html>
