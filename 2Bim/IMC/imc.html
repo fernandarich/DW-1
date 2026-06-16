@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="imc.css">
+</head>
+<body>
+    <form id="idForm" method="post" action="/calcular-imc" enctype="multipart/form-data">
+        <h1>Calculadora de IMC</h1><br><br>
+
+        <label for="inputNome" class="label">Nome:</label>
+        <input type="text" id="inputNome" name="nome" placeholder="Digite seu nome" required>
+        <br>
+        <label for="inputCPF" class="label">CPF:</label>
+        <input type="number" id="inputCPF" name="cpf" placeholder="Digite seu CPF" required>
+        <br>
+        <label for="inputImagem">Selecione a Foto da Imensa:</label>
+        <input type="file" id="inputImagem" name="foto" accept="image/*" onchange="mostrarPreview(event)">
+        <div class="preview-container">
+            <img id="previewImagem" alt="Preview da Foto do Aluno">
+        </div>
+        <br>
+        <label for="inputPeso" class="label">Peso (kg):</label>
+        <input type="number" id="inputPeso" name="peso" placeholder="Digite seu peso em kg" required>
+        <br>
+        <label for="inputAltura" class="label">Altura (m):</label>
+        <input type="number" id="inputAltura" name="altura" placeholder="Digite sua altura em metros" step="0.01" required>
+        <br>
+        <button type="submit">Calcular IMC</button>
+    </form>
+    
+</body>
+</html>

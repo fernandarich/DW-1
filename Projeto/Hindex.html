@@ -49,13 +49,11 @@
             const senhaSalva = localStorage.getItem("senha");
 
             if (email === "admin@gmail.com" && senha === "123456") {
-                alert("Bem-vindo, admin!");
                 localStorage.setItem("admin@gmail.com", email);
                 localStorage.setItem("123456", senha);
                 window.location.href = "Hhome.html";
             }
             else if (email === emailSalvo && senha === senhaSalva) {
-                alert("Login bem-sucedido!");
                 window.location.href = "Hhome.html";
             } else {
                 alert("Email ou senha incorretos!");

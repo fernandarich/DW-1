@@ -56,9 +56,69 @@
                 <button onclick="abrirModal()">Comprar ingresso</button>
             </div>
         </div>
+          <div id="modalIngresso" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <h2>Escolha seu ingresso</h2>
+
+            <div class="mapa">
+                <img src="I11.png" alt="Mapa do estádio" onclick="abrirZoom(this)">
+            </div>
+
+            <div class="opcao">
+                <h3>Arquibancada Norte</h3>
+                <p>R$ 50,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Norte', 50)">Adicionar</button>
+            </div>
+
+            <div class="opcao">
+                <h3>Cadeiras Superiores</h3>
+                <p>R$ 60,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Superior', 60)">Adicionar</button>
+            </div>
+
+            <div class="opcao">
+                <h3>Cadeira Corner</h3>
+                <p>R$ 120,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Corner', 120)">Adicionar</button>
+            </div>
+
+            <div class="opcao">
+                <h3>Cadeira Gold</h3>
+                <p>R$ 150,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Gold', 150)">Adicionar</button>
+            </div>
+
+            <div class="opcao">
+                <h3>Gramado</h3>
+                <p>R$ 200,00</p>
+                <input type="number" min="1" value="1">
+                <button onclick="adicionarIngresso('Gramado', 200)">Adicionar</button>
+            </div>
+
+        </div>
+    </div>
+    <div id="zoomImagem" class="zoom" onclick="fecharZoom()">
+        <span class="fecharZoom">&times;</span>
+        <img id="imgGrande">
+    </div>
+    <div id="carrinhoLateral" class="carrinho-lateral">
+    <h2>Seu Carrinho</h2>
+    <div id="carrinho"></div>
+    <p id="total"></p>
+    <button onclick="fecharCarrinho()">Fechar</button>
+    <script src="Jcarrinho.js"></script>
+</div>
     </main>
 
     <script src="Jcarrinho.js"></script>
 </body>
+<script>
+
+</script>
 
 </html>
