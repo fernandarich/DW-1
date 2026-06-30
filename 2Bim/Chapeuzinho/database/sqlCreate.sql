@@ -11,3 +11,5 @@ INSERT INTO public.produto (nome_produto, quantidade_produto, quantidade_minima_
 ('Doce', 3, 5, 10),
 ('Bala', 7, 10, 15),
 ('Pão', 18, 20, 50);
+
+--DROP TABLE public.produto;
